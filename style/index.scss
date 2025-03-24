@@ -1,0 +1,701 @@
+    @import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+
+    //Variables de colors
+    $SHADE1: #FFFFFF;
+    $SHADE2: #BFBFBF;
+    $SHADE3: #7F7F7F;
+    $SHADE4: #404040;
+    $SHADE5: #000000;
+
+    $TAULELL: #fafaf8;
+    $NEGRE: #080808;
+    $MARRO: #640303;
+    $LILAFOSC: #5e3577;
+    $BLAUCLAR: #d2eaf5;
+    $LILA: #b02f7c;
+    $TARONJA: #fa811d;
+    $VERMELL: #f50c2b;
+    $GROC: #ffed20;
+    $VERD: #41994e;
+    $BLAUFOSC: #5a6dba;
+
+    //Estils general
+    body {
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        position: relative;
+        bottom: 60px;
+        font-family: "Boogaloo", cursive;
+        font-weight: 400;
+        font-style: normal;
+        background-image: url('/images/background.jpeg');
+        background-repeat: repeat;
+        background-size: 5%;
+        margin: 0;
+
+        #titol {
+            font-size: 46px;
+            text-align: center;
+            border-style: solid;
+            border-radius: 10px;
+            border-color: $SHADE5;
+            box-shadow: rgba(14, 30, 37, 1.12) 0px 2px 4px 0px, rgba(14, 30, 37, 1.32) 0px 2px 16px 0px;
+            background-color: $SHADE1;
+            width: 40%;
+            margin: 10% auto 30px auto;
+            padding: 10px;
+        }
+
+        img {
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+        }
+    }
+
+    //Bloc opcions de la paritda
+    #opcionsPartida {
+        h3 {
+            margin: 10px;
+        }
+
+        text-align: center;
+        padding: 10px;
+        width: 40%;
+        margin: auto;
+
+        border-style: solid;
+        border-radius: 10px;
+        border-color: $SHADE5;
+        box-shadow: rgba(14, 30, 37, 1.12) 0px 2px 4px 0px,
+        rgba(14, 30, 37, 1.32) 0px 2px 16px 0px;
+        background-color: $SHADE1;
+    }
+
+    //Formulari numero de jugadors
+    #numJugadors {
+        width: 100%;
+
+        h3 {
+            font-size: 28px;
+        }
+
+        select {
+            width: 30%;
+            padding: 15px;
+            border: 2px solid $SHADE3;
+            border-radius: 6px;
+            background-color: $SHADE1;
+            font-family: "Boogaloo", cursive;
+            font-size: 16px;
+            transition: 0.3s;
+
+            &:hover {
+                border: 2px solid $SHADE5;
+                transition: 0.3s;
+            }
+        }
+
+        input[type=text] {
+            width: 45%;
+            text-align: center;
+        }
+    }
+
+    //Formulari nom jugadors
+    #nomJugadors {
+        align-items: center;
+
+        h3 {
+            font-size: 28px;
+        }
+
+        label {
+            font-size: 20px;
+            display: inline-block;
+            width: auto;
+            margin: 5px;
+            text-align: center;
+        }
+
+        input[type=text] {
+            display: inline-block;
+            width: 20%;
+            padding: 15px;
+            margin: 5px;
+            align-self: left;
+            border: 2px solid $SHADE3;
+            border-radius: 6px;
+            transition: 0.3s;
+
+            &:focus {
+                border-radius: 12px;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    //Botons Menu d'opcions
+    .botoOpcions {
+        background-color: $SHADE1;
+        border: 2px solid $SHADE5;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: $SHADE5;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Boogaloo", cursive;
+        font-size: 16px;
+        padding: 8px 8px;
+        width: 35%;
+        transition: 0.3s;
+
+        &:focus-visible {
+            box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+            transition: box-shadow .2s;
+        }
+
+        &:hover {
+            background-color: $SHADE5;
+            transition: 0.3s;
+            color: $SHADE1;
+            border-color: $SHADE5;
+            transform: scale(0.986);
+        }
+    }
+
+    //Flexbox per el taulell i les caixes de info
+    .parent {
+        transform: scale(0.85);
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        height: 100vh;
+        width: 100%;
+
+        //Estil general de les 3 caixes
+        .taulell,
+        .info1,
+        .info2 {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border-style: solid;
+            border-radius: 10px;
+            border-color: $SHADE5;
+            box-shadow: rgba(14, 30, 37, 1.12) 0px 2px 4px 0px, rgba(14, 30, 37, 1.32) 0px 2px 16px 0px;
+            margin: 2% 0.7%;
+            padding: 10px;
+        }
+
+        //Estil de les infos
+        .info1,
+        .info2 {
+            flex: 25%;
+            background-color: $SHADE1;
+            height: 994px;
+
+            p {
+                margin: 4px;
+            }
+        }
+    }
+
+    .info1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        .daus {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 48px;
+        }
+
+        p {
+            font-size: 22px;
+        }
+
+        h2 {
+            font-size: 34px;
+            background-color: $SHADE1;
+            padding: 6px 0;
+            text-align: center;
+            border-bottom: 2px solid $SHADE5;
+        }
+
+        img {
+            width: 72px;
+            height: 72px;
+        }
+
+        button {
+            background-color: $SHADE1;
+            border: 2px solid $SHADE5;
+            border-radius: 8px;
+            box-sizing: border-box;
+            color: $SHADE5;
+            cursor: pointer;
+            display: inline-block;
+            font-family: "Boogaloo", cursive;
+            font-size: 16px;
+            padding: 8px 8px;
+            width: 146px;
+            transition: 0.3s;
+
+            &:focus-visible {
+                box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+                transition: box-shadow .2s;
+            }
+
+            &:hover {
+                background-color: $SHADE5;
+                transition: 0.3s;
+                color: $SHADE1;
+                border-color: $SHADE5;
+                transform: scale(0.986);
+            }
+        }
+    }
+
+    #fiPartida {
+        display: none;
+        text-align: center;
+
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        background-color: white;
+        user-select: none;
+        border-style: solid;
+        border-radius: 10px;
+        border-color: $SHADE5;
+        box-shadow: rgba(14, 30, 37, 1.12) 0px 2px 4px 0px, rgba(14, 30, 37, 1.32) 0px 2px 16px 0px;
+        margin: 2% 0.7%;
+        padding: 10px;
+        margin-top: 15%;
+        margin-left: 15%;
+        margin-right: 15%;
+
+        .copy {
+            margin: 0;
+        }
+    }
+
+    //Responsive
+    @media only screen and (max-width: 1000px) {
+        #titol {
+            width: 70%;
+        }
+
+        #opcionsPartida {
+            width: 70%;
+        }
+
+        #nomJugadors {
+            input[type=text] {
+                width: 50%;
+            }
+        }
+
+        #numJugadors {
+            select {
+                width: 50%;
+            }
+        }
+
+    }
+
+    //Taulell
+
+    .container img {
+        width: 40px;
+        margin-left: 16px;
+        padding: 0;
+    }
+
+    .dark-purple {
+        background-color: $LILAFOSC;
+    }
+
+    .light-blue {
+        background-color: $BLAUCLAR;
+    }
+
+    .purple {
+        background-color: $LILA;
+    }
+
+    .orange {
+        background-color: $TARONJA;
+    }
+
+    .red {
+        background-color: $VERMELL;
+    }
+
+    .yellow {
+        background-color: $GROC;
+    }
+
+    .green {
+        background-color: $VERD;
+    }
+
+    .dark-blue {
+        background-color: $BLAUFOSC;
+    }
+
+    .taulell {
+        display: grid;
+        grid-template-columns: 125px repeat(9, 80px) 125px;
+        grid-template-rows: 125px repeat(9, 80px) 125px;
+        grid-gap: 2px;
+        margin: 50px auto;
+        border: #000000;
+        background-color: #000000;
+        width: 994px;
+        height: 994px;
+    }
+
+    .center {
+        grid-column: 2 / 11;
+        grid-row: 2 / 11;
+        background: $TAULELL;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+
+    .titol {
+        grid-column: 1 / 9;
+        grid-row: 4;
+        font-size: 90px;
+        letter-spacing: 12px;
+    }
+
+    .fila {
+        display: grid;
+        grid-gap: 2px;
+    }
+
+    .fila-horitzontal {
+        grid-template-columns: repeat(9, 80px);
+        grid-template-rows: 125px;
+    }
+
+    .fila-vertical {
+        grid-template-columns: 125px;
+        grid-template-rows: repeat(9, 80px);
+
+        .container {
+            top: 50%;
+            left: 50%;
+        }
+    }
+
+    .fila-sota {
+        grid-column: 2 / 11;
+        grid-row: 11;
+    }
+
+    .fila-esquerra {
+        grid-column: 1;
+        grid-row: 2 / 11;
+
+        .container {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+    }
+
+    .fila-sobre {
+        grid-column: 2 / 11;
+        grid-row: 1;
+
+        .container {
+            transform: rotate(180deg);
+        }
+    }
+
+    .fila-dreta {
+        grid-column: 11;
+        grid-row: 2 / 11;
+
+        .container {
+            transform: translate(-50%, -50%) rotate(270deg);
+        }
+    }
+
+    .espai {
+        background: $TAULELL;
+        text-align: center;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transform-origin: center;
+            height: 125px;
+            width: 80px;
+        }
+
+        .nom,
+        .instruccions {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .preu {
+            font-size: 16px;
+            padding-bottom: 5px;
+        }
+    }
+
+
+    .esquina {
+        .container {
+            justify-content: space-around;
+            height: 100%;
+            width: 100%;
+        }
+
+        .nom {
+            padding: 0;
+        }
+    }
+
+    .propietat {
+        .color-barra {
+            height: 25px;
+            border-bottom: 2px solid $NEGRE;
+        }
+
+        .nom {
+            padding-bottom: 0px;
+        }
+    }
+
+    .estacio {
+        .nom {
+            padding-top: 2px;
+        }
+    }
+
+    .tarifa {
+        .nom {
+            padding-top: 10px;
+            font-size: 14px;
+        }
+
+        .instruccions {
+            font-size: 10px;
+        }
+    }
+
+    .sortida {
+        grid-column: 11;
+        grid-row: 11 / 12;
+        position: relative;
+
+        .container {
+            justify-content: flex-start;
+            transform: rotate(315deg);
+        }
+
+        .instruccions {
+            padding: 5px 0;
+        }
+
+        .paraula-sortida {
+            padding-top: 20px;
+            font-size: 40px;
+            color: $VERMELL;
+        }
+
+        .fletxa-sortida {
+            font-size: 45px;
+            color: $VERMELL;
+            position: absolute;
+            bottom: -10px;
+            left: 5px;
+        }
+    }
+
+    .preso {
+        grid-column: 1;
+        grid-row: 11 / 12;
+        display: grid;
+        grid-template-columns: repeat(10, 12.5px);
+        grid-template-rows: repeat(10, 12.5px);
+        justify-content: center;
+        align-items: center;
+
+        .nomes {
+            grid-column: 3;
+            grid-row: 4;
+            transform: rotate(90deg);
+            padding-top: 20px;
+            border-top: 1px solid $NEGRE;
+        }
+
+        .visita {
+            grid-column: 6;
+            grid-row: 8;
+            padding-top: 20px;
+        }
+
+        .container {
+            align-items: center;
+            transform: rotate(45deg);
+        }
+
+        .nom {
+            font-size: 14px;
+        }
+
+        .finestra {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            width: 55px;
+            height: 55px;
+            background: $TAULELL;
+            border: 2px solid $NEGRE;
+            translate: 80px -25px;
+        }
+
+        .persona {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            font-size: 40px;
+        }
+
+        .barra {
+            height: 55px;
+            width: 2px;
+            background: $NEGRE;
+            display: flex;
+        }
+
+        .instruccions12 {
+            padding: 2px;
+            position: absolute;
+            background-color: white;
+        }
+
+        .instruccions11 {
+            position: relative;
+            bottom: -92px;
+            left: 7px;
+            transform: rotate(45deg);
+        }
+    }
+
+    .parking {
+        grid-column: 1;
+        grid-row: 1 / 2;
+
+        .container {
+            justify-content: center;
+            transform: rotate(135deg);
+        }
+
+        .nom {
+            font-size: 16px;
+        }
+    }
+
+    .anar-preso {
+        grid-column: 11;
+        grid-row: 1 / 1;
+
+        .container {
+            justify-content: center;
+            transform: rotate(225deg);
+        }
+
+        .nom {
+            font-size: 16px;
+        }
+    }
+
+    .sort {
+        .container {
+            justify-content: center;
+        }
+
+        .blau {
+            color: $BLAUFOSC;
+        }
+
+        img {
+            width: 65px;
+            margin-left: 7px;
+        }
+    }
+
+    .cofre-comunitari {
+        .nom {
+            padding-left: 10px;
+        }
+
+        .container {
+            justify-content: space-around;
+        }
+
+        .instruccions {
+            font-size: 16px;
+        }
+
+    }
+
+    .cofre-comunitari img {
+        width: 50px;
+        margin-left: 16px;
+    }
+
+
+    .tarifa-impost {
+        .container {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nom {
+            padding-bottom: 5px;
+        }
+
+        .diamant {
+            width: 5px;
+            height: 5px;
+            background: $NEGRE;
+            transform: rotate(45deg);
+            display: inline-block;
+        }
+
+        .instruccions {
+            font-size: 16px;
+        }
+    }
+
+    .tarifa-lux {
+
+        .instruccions {
+            font-size: 16px;
+            padding-bottom: 5px;
+        }
+    }

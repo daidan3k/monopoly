@@ -1,0 +1,581 @@
+@import url("https://fonts.googleapis.com/css2?family=Boogaloo&display=swap");
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+  position: relative;
+  bottom: 60px;
+  font-family: "Boogaloo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  background-image: url("/images/background.jpeg");
+  background-repeat: repeat;
+  background-size: 5%;
+  margin: 0;
+}
+body #titol {
+  font-size: 46px;
+  text-align: center;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #000000;
+  box-shadow: rgb(14, 30, 37) 0px 2px 4px 0px, rgb(14, 30, 37) 0px 2px 16px 0px;
+  background-color: #FFFFFF;
+  width: 40%;
+  margin: 10% auto 30px auto;
+  padding: 10px;
+}
+body img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+#opcionsPartida {
+  text-align: center;
+  padding: 10px;
+  width: 40%;
+  margin: auto;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #000000;
+  box-shadow: rgb(14, 30, 37) 0px 2px 4px 0px, rgb(14, 30, 37) 0px 2px 16px 0px;
+  background-color: #FFFFFF;
+}
+#opcionsPartida h3 {
+  margin: 10px;
+}
+
+#numJugadors {
+  width: 100%;
+}
+#numJugadors h3 {
+  font-size: 28px;
+}
+#numJugadors select {
+  width: 30%;
+  padding: 15px;
+  border: 2px solid #7F7F7F;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  font-family: "Boogaloo", cursive;
+  font-size: 16px;
+  transition: 0.3s;
+}
+#numJugadors select:hover {
+  border: 2px solid #000000;
+  transition: 0.3s;
+}
+#numJugadors input[type=text] {
+  width: 45%;
+  text-align: center;
+}
+
+#nomJugadors {
+  align-items: center;
+}
+#nomJugadors h3 {
+  font-size: 28px;
+}
+#nomJugadors label {
+  font-size: 20px;
+  display: inline-block;
+  width: auto;
+  margin: 5px;
+  text-align: center;
+}
+#nomJugadors input[type=text] {
+  display: inline-block;
+  width: 20%;
+  padding: 15px;
+  margin: 5px;
+  align-self: left;
+  border: 2px solid #7F7F7F;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+#nomJugadors input[type=text]:focus {
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.botoOpcions {
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Boogaloo", cursive;
+  font-size: 16px;
+  padding: 8px 8px;
+  width: 35%;
+  transition: 0.3s;
+}
+.botoOpcions:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow 0.2s;
+}
+.botoOpcions:hover {
+  background-color: #000000;
+  transition: 0.3s;
+  color: #FFFFFF;
+  border-color: #000000;
+  transform: scale(0.986);
+}
+
+.parent {
+  transform: scale(0.85);
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  height: 100vh;
+  width: 100%;
+}
+.parent .taulell,
+.parent .info1,
+.parent .info2 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #000000;
+  box-shadow: rgb(14, 30, 37) 0px 2px 4px 0px, rgb(14, 30, 37) 0px 2px 16px 0px;
+  margin: 2% 0.7%;
+  padding: 10px;
+}
+.parent .info1,
+.parent .info2 {
+  flex: 25%;
+  background-color: #FFFFFF;
+  height: 994px;
+}
+.parent .info1 p,
+.parent .info2 p {
+  margin: 4px;
+}
+
+.info1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.info1 .daus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info1 h1 {
+  text-align: center;
+  font-size: 48px;
+}
+.info1 p {
+  font-size: 22px;
+}
+.info1 h2 {
+  font-size: 34px;
+  background-color: #FFFFFF;
+  padding: 6px 0;
+  text-align: center;
+  border-bottom: 2px solid #000000;
+}
+.info1 img {
+  width: 72px;
+  height: 72px;
+}
+.info1 button {
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Boogaloo", cursive;
+  font-size: 16px;
+  padding: 8px 8px;
+  width: 146px;
+  transition: 0.3s;
+}
+.info1 button:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow 0.2s;
+}
+.info1 button:hover {
+  background-color: #000000;
+  transition: 0.3s;
+  color: #FFFFFF;
+  border-color: #000000;
+  transform: scale(0.986);
+}
+
+#fiPartida {
+  display: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  background-color: white;
+  -moz-user-select: none;
+       user-select: none;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #000000;
+  box-shadow: rgb(14, 30, 37) 0px 2px 4px 0px, rgb(14, 30, 37) 0px 2px 16px 0px;
+  margin: 2% 0.7%;
+  padding: 10px;
+  margin-top: 15%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+#fiPartida .copy {
+  margin: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  #titol {
+    width: 70%;
+  }
+  #opcionsPartida {
+    width: 70%;
+  }
+  #nomJugadors input[type=text] {
+    width: 50%;
+  }
+  #numJugadors select {
+    width: 50%;
+  }
+}
+.container img {
+  width: 40px;
+  margin-left: 16px;
+  padding: 0;
+}
+
+.dark-purple {
+  background-color: #5e3577;
+}
+
+.light-blue {
+  background-color: #d2eaf5;
+}
+
+.purple {
+  background-color: #b02f7c;
+}
+
+.orange {
+  background-color: #fa811d;
+}
+
+.red {
+  background-color: #f50c2b;
+}
+
+.yellow {
+  background-color: #ffed20;
+}
+
+.green {
+  background-color: #41994e;
+}
+
+.dark-blue {
+  background-color: #5a6dba;
+}
+
+.taulell {
+  display: grid;
+  grid-template-columns: 125px repeat(9, 80px) 125px;
+  grid-template-rows: 125px repeat(9, 80px) 125px;
+  grid-gap: 2px;
+  margin: 50px auto;
+  border: #000000;
+  background-color: #000000;
+  width: 994px;
+  height: 994px;
+}
+
+.center {
+  grid-column: 2/11;
+  grid-row: 2/11;
+  background: #fafaf8;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.titol {
+  grid-column: 1/9;
+  grid-row: 4;
+  font-size: 90px;
+  letter-spacing: 12px;
+}
+
+.fila {
+  display: grid;
+  grid-gap: 2px;
+}
+
+.fila-horitzontal {
+  grid-template-columns: repeat(9, 80px);
+  grid-template-rows: 125px;
+}
+
+.fila-vertical {
+  grid-template-columns: 125px;
+  grid-template-rows: repeat(9, 80px);
+}
+.fila-vertical .container {
+  top: 50%;
+  left: 50%;
+}
+
+.fila-sota {
+  grid-column: 2/11;
+  grid-row: 11;
+}
+
+.fila-esquerra {
+  grid-column: 1;
+  grid-row: 2/11;
+}
+.fila-esquerra .container {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.fila-sobre {
+  grid-column: 2/11;
+  grid-row: 1;
+}
+.fila-sobre .container {
+  transform: rotate(180deg);
+}
+
+.fila-dreta {
+  grid-column: 11;
+  grid-row: 2/11;
+}
+.fila-dreta .container {
+  transform: translate(-50%, -50%) rotate(270deg);
+}
+
+.espai {
+  background: #fafaf8;
+  text-align: center;
+}
+.espai .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transform-origin: center;
+  height: 125px;
+  width: 80px;
+}
+.espai .nom,
+.espai .instruccions {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.espai .preu {
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+
+.esquina .container {
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+.esquina .nom {
+  padding: 0;
+}
+
+.propietat .color-barra {
+  height: 25px;
+  border-bottom: 2px solid #080808;
+}
+.propietat .nom {
+  padding-bottom: 0px;
+}
+
+.estacio .nom {
+  padding-top: 2px;
+}
+
+.tarifa .nom {
+  padding-top: 10px;
+  font-size: 14px;
+}
+.tarifa .instruccions {
+  font-size: 10px;
+}
+
+.sortida {
+  grid-column: 11;
+  grid-row: 11/12;
+  position: relative;
+}
+.sortida .container {
+  justify-content: flex-start;
+  transform: rotate(315deg);
+}
+.sortida .instruccions {
+  padding: 5px 0;
+}
+.sortida .paraula-sortida {
+  padding-top: 20px;
+  font-size: 40px;
+  color: #f50c2b;
+}
+.sortida .fletxa-sortida {
+  font-size: 45px;
+  color: #f50c2b;
+  position: absolute;
+  bottom: -10px;
+  left: 5px;
+}
+
+.preso {
+  grid-column: 1;
+  grid-row: 11/12;
+  display: grid;
+  grid-template-columns: repeat(10, 12.5px);
+  grid-template-rows: repeat(10, 12.5px);
+  justify-content: center;
+  align-items: center;
+}
+.preso .nomes {
+  grid-column: 3;
+  grid-row: 4;
+  transform: rotate(90deg);
+  padding-top: 20px;
+  border-top: 1px solid #080808;
+}
+.preso .visita {
+  grid-column: 6;
+  grid-row: 8;
+  padding-top: 20px;
+}
+.preso .container {
+  align-items: center;
+  transform: rotate(45deg);
+}
+.preso .nom {
+  font-size: 14px;
+}
+.preso .finestra {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 55px;
+  height: 55px;
+  background: #fafaf8;
+  border: 2px solid #080808;
+  translate: 80px -25px;
+}
+.preso .persona {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+}
+.preso .barra {
+  height: 55px;
+  width: 2px;
+  background: #080808;
+  display: flex;
+}
+.preso .instruccions12 {
+  padding: 2px;
+  position: absolute;
+  background-color: white;
+}
+.preso .instruccions11 {
+  position: relative;
+  bottom: -92px;
+  left: 7px;
+  transform: rotate(45deg);
+}
+
+.parking {
+  grid-column: 1;
+  grid-row: 1/2;
+}
+.parking .container {
+  justify-content: center;
+  transform: rotate(135deg);
+}
+.parking .nom {
+  font-size: 16px;
+}
+
+.anar-preso {
+  grid-column: 11;
+  grid-row: 1/1;
+}
+.anar-preso .container {
+  justify-content: center;
+  transform: rotate(225deg);
+}
+.anar-preso .nom {
+  font-size: 16px;
+}
+
+.sort .container {
+  justify-content: center;
+}
+.sort .blau {
+  color: #5a6dba;
+}
+.sort img {
+  width: 65px;
+  margin-left: 7px;
+}
+
+.cofre-comunitari .nom {
+  padding-left: 10px;
+}
+.cofre-comunitari .container {
+  justify-content: space-around;
+}
+.cofre-comunitari .instruccions {
+  font-size: 16px;
+}
+
+.cofre-comunitari img {
+  width: 50px;
+  margin-left: 16px;
+}
+
+.tarifa-impost .container {
+  justify-content: center;
+  align-items: center;
+}
+.tarifa-impost .nom {
+  padding-bottom: 5px;
+}
+.tarifa-impost .diamant {
+  width: 5px;
+  height: 5px;
+  background: #080808;
+  transform: rotate(45deg);
+  display: inline-block;
+}
+.tarifa-impost .instruccions {
+  font-size: 16px;
+}
+
+.tarifa-lux .instruccions {
+  font-size: 16px;
+  padding-bottom: 5px;
+}/*# sourceMappingURL=index.css.map */

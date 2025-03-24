@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Asandiopoly | Opcions</title>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+
+<body>
+    <script src="js/player.js"></script>
+    <script src="js/casillas.js"></script>
+    <script src="js/cartas.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/monopoly.js"></script>
+
+    <h1 id="titol">Asandiopoly</h1>
+
+    <div id="opcionsPartida">
+        <form action="numJugadors" id="numJugadors">
+            <h3>Tria el numero de jugadors:</h3>
+            <select name="Jugadors" id="selectPlayers">
+                <option value="2">2 Jugadors</option>
+                <option value="3">3 Jugadors</option>
+                <option value="4">4 Jugadors</option>
+            </select>
+            <br> <br>
+            <input type="submit" value="Seguent" id="seguent" onclick="seguentOpcio()" class="botoOpcions">
+        </form>
+
+        <form action="nomJugadors" id="nomJugadors" style="display: none;">
+            <h3>Noms dels jugadors:</h3>
+
+            <label for="nomJugador1" id="labelJ1">Jugador 1: </label>
+            <input type="text" id="nomJugador1" value="Jugador 1" maxlength="30">
+
+            <label for="nomJugador2" id="labelJ2">Jugador 2: </label>
+            <input type="text" id="nomJugador2" value="Jugador 2" maxlength="30">
+
+            <label for="nomJugador3" id="labelJ3">Jugador 3: </label>
+            <input type="text" id="nomJugador3" value="Jugador 3" maxlength="30">
+
+            <label for="nomJugador4" id="labelJ4">Jugador 4: </label>
+            <input type="text" id="nomJugador4" value="Jugador 4" maxlength="30">
+
+            <br>
+            <input type="submit" value="Jugar" id="startGame" class="botoOpcions" onclick="nomsJugadors()">
+        </form>
+
+    </div>
+
+    <div id="parent" class="parent">
+        <div class="info1">
+            <div class="taulaDaus">
+                <div class="daus">
+                    <h2 id="torn"></h2> <br>
+                    <div>
+                        <img id="dau1" src="images/daus/dau1.png">
+                        <img id="dau2" src="images/daus/dau1.png">
+                    </div>
+                    <button id="tirarDaus">Tirar els daus</button>
+                </div>
+            </div>
+            <br><br>
+            <div class="infoAlquilers" style="text-align: center;">
+                <h1>Informacio alquilers</h1>
+                <h2>Companyies</h2>
+                <p>Si tens una companyia cobraras 4 vegades la cantitat de els daus tirats</p>
+                <p>Si tens dos companyies cobraras 10 vegades la cantitat de els daus tirats</p>
+                <br>
+                <h2>Estacions</h2>
+                <p>Cobraras 100€ per cada estacio que tinguis</p>
+            </div>
+            <br>
+        </div>
+        <div class="taulell" id="taulell">
+            <div id="fitxaJ1">
+                <span class="dot j1"></span>
+            </div>
+            <div id="fitxaJ2">
+                <span class="dot j2"></span>
+            </div>
+            <div id="fitxaJ3">
+                <span class="dot j3"></span>
+            </div>
+            <div id="fitxaJ4">
+                <span class="dot j4"></span>
+            </div>
+            <div class="center">
+                <h1 class="titol">ASANDIOPOLY</h1>
+            </div>
+
+            <diV class="espai esquina sortida">
+                <div class="container">
+                    <div class="paraula-sortida">Sortida</div>
+                    <div class="instruccions">Cobrar 200€</div>
+                    <div class="instruccions">01</div>
+                </div>
+                <div class="fletxa-sortida fa fa-long-arrow-left"></div>
+            </diV>
+
+            <div class="fila fila-horitzontal fila-sota">
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra light-blue"></div>
+                        <div class="nom">Avinguda Bolivia</div>
+                        <div class="preu">120€</div>
+                        <div class="instruccions">10</div>
+                    </div>
+                </div>
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra light-blue"></div>
+                        <div class="nom">Avinguda Peru</div>
+                        <div class="preu">100€</div>
+                        <div class="instruccions">09</div>
+                    </div>
+                </div>
+                <div class="espai sort">
+                    <div class="container">
+                        <div class="nom">Sort</div>
+                        <img src="/images/casellas/randomCasilla-removebg-preview.png">
+                        <div class="instruccions">08</div>
+                    </div>
+                </div>
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra light-blue"></div>
+                        <div class="nom">Avinguda Mexic</div>
+                        <div class="preu">100€</div>
+                        <div class="instruccions">07</div>
+                    </div>
+                </div>
+
+                <div class="espai estacio">
+                    <div class="container">
+                        <div class="preu">200€</div>
+                        <div class="nom">Estació LATAM</div>
+                        <img src="images/casellas/estacionTren-removebg-preview.png" alt="">
+                        <div class="instruccions">06</div>
+                    </div>
+                </div>
+
+                <div class="espai tarifa tarifa-impost">
+                    <div class="container">
+                        <div class="nom">Impost sobre la renta</div>
+                        <img src="" alt="">
+                        <div class="instruccions">75€</div>
+                        <div class="instruccions">05</div>
+                    </div>
+                </div>
+
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra dark-purple"></div>
+                        <div class="nom">Avinguda Tartaria</div>
+                        <div class="preu">50€</div>
+                        <div class="instruccions">04</div>
+                    </div>
+                </div>
+
+                <div class="espai cofre-comunitari">
+                    <div class="container">
+                        <div class="nom">Cofre Comunitari</div>
+                        <img src="images/casellas/logoRicos-removebg-preview.png" alt="">
+                        <div class="instruccions">03</div>
+                    </div>
+                </div>
+
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra dark-purple"></div>
+                        <div class="nom">Avinguda Empírica</div>
+                        <div class="preu">50€</div>
+                        <div class="instruccions">02</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="espai esquina preso">
+                <div class="nomes">Només</div>
+                <div class="dibuixant">
+                    <div class="container">
+                        <div class="finestra">
+                            <br>
+                            <div class="barra"></div>
+                            <br>
+                            <div class="barra"></div>
+                            <div class="instruccions12">12</div>
+                            <div class="barra"></div>
+                            <div class="barra"></div>
+                            <br>
+                            <div class="barra"></div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="instruccions11">11</div>
+                <div class="visita">Visita</div>
+            </div>
+
+            <div class="fila fila-vertical fila-esquerra">
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra orange"></div>
+                        <div class="nom">Avinguda Zimbawe</div>
+                        <div class="preu">200€</div>
+                        <div class="instruccions">21</div>
+                    </div>
+                </div>
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra orange"></div>
+                        <div class="nom">Avinguda Nigeria</div>
+                        <div class="preu">180€</div>
+                        <div class="instruccions">20</div>
+                    </div>
+                </div>
+
+                <div class="espai cofre-comunitari">
+                    <div class="container">
+                        <div class="nom">Cofre Comunitari</div>
+                        <img src="images/casellas/logoRicos-removebg-preview.png" alt="">
+                        <div class="instruccions">19</div>
+                    </div>
+                </div>
+
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra orange"></div>
+                        <div class="nom">Avinguda Mali</div>
+                        <div class="preu">180€</div>
+                        <div class="instruccions">18</div>
+                    </div>
+                </div>
+                <div class="espai estacio">
+                    <div class="container">
+                        <div class="nom">Estació Negra</div>
+                        <div class="preu">200€</div>
+                        <div class="instruccions">17</div>
+                    </div>
+                </div>
+
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra purple"></div>
+                        <div class="nom">Avinguda Reptil</div>
+                        <div class="preu">140€</div>
+                        <div class="instruccions">16</div>
+                    </div>
+                </div>
+
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra purple"></div>
+                        <div class="nom">States Avenue</div>
+                        <div class="preu">140€</div>
+                        <div class="instruccions">15</div>
+                    </div>
+                </div>
+
+                <div class="espai utilitat companyia-electrica">
+                    <div class="container">
+                        <div class="preu">150€</div>
+                        <div class="nom"> Companyia Elèctrica</div>
+                        <img src="images/casellas/fabricaAsandiop-removebg-preview.png" alt="">
+                        <div class="instruccions">14</div>
+                    </div>
+                </div>
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra purple"></div>
+                        <div class="nom">Carrer Astral</div>
+                        <div class="preu">140€</div>
+                        <div class="instruccions">13</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="espai esquina parking">
+                <div class="container">
+                    <div class="nom">Parking</div>
+                    <div class="nom">Gratis</div>
+                    <div class="instruccions">22</div>
+                </div>
+            </div>
+
+            <div class="fila fila-horitzontal fila-sobre">
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra red"></div>
+                        <div class="nom">Avinguda Kentucky</div>
+                        <div class="preu">200€</div>
+                        <div class="instruccions">23</div>
+                    </div>
+                </div>
+                <div class="espai sort">
+                    <div class="container">
+                        <div class="nom">Sort</div>
+                        <img src="/images/casellas/randomCasilla-removebg-preview.png">
+                        <div class="instruccions">24</div>
+                    </div>
+                </div>
+
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra red"></div>
+                        <div class="nom">Avinguda Donalds</div>
+                        <div class="preu"> 220€</div>
+                        <div class="instruccions">25</div>
+                    </div>
+                </div>
+
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra red"></div>
+                        <div class="nom">Avinguda King</div>
+                        <div class="preu"> 220€</div>
+                        <div class="instruccions">26</div>
+                    </div>
+                </div>
+
+                <div class="espai estacio">
+                    <div class="container">
+                        <div class="preu">200€</div>
+                        <div class="nom"> Estació Burguir</div>
+                        <img src="images/casellas/estacionTren-removebg-preview.png" alt="">
+                        <div class="instruccions">27</div>
+                    </div>
+                </div>
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra yellow"></div>
+                        <div class="nom">Avinguda TFT</div>
+                        <div class="preu"> 260€</div>
+                        <div class="instruccions">28</div>
+                    </div>
+                </div>
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra yellow"></div>
+                        <div class="nom">Avinguda Ligo</div>
+                        <div class="preu"> 260€</div>
+                        <div class="instruccions">29</div>
+                    </div>
+                </div>
+
+                <div class="espai utilitat companyia-aigua">
+                    <div class="container">
+                        <div class="preu">120€</div>
+                        <div class="nom">Aigua Treballs</div>
+                        <img src="images/casellas/fabricaAsandiop-removebg-preview.png" alt="">
+                        <div class="instruccions">30</div>
+                    </div>
+                </div>
+
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra yellow"></div>
+                        <div class="nom">Avinguda Abbys</div>
+                        <div class="preu"> 280€</div>
+                        <div class="instruccions">31</div>
+                    </div>
+                </div>
+            </div>
+
+            <diV class="espai esquina anar-preso">
+                <diV class="container">
+                    <div class="nom">Ves a</div>
+                    <div class="nom">la presó</div>
+                    <div class="instruccions">32</div>
+                </diV>
+            </diV>
+
+            <div class="fila fila-vertical fila-dreta">
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra green"></div>
+                        <div class="nom">Avinguda Void</div>
+                        <div class="preu"> 300€</div>
+                        <div class="instruccions">33</div>
+                    </div>
+                </div>
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra green"></div>
+                        <div class="nom">Avinguda Stars</div>
+                        <div class="preu"> 300€</div>
+                        <div class="instruccions">34</div>
+                    </div>
+                </div>
+                <diV class="espai cofre-comunitari">
+                    <diV class="container">
+                        <div class="nom">Cofre Comunitari</div>
+                        <img src="images/casellas/logoRicos-removebg-preview.png" alt="">
+                        <div class="instruccions">35</div>
+                    </diV>
+                </diV>
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra green"></div>
+                        <div class="nom">Avinguda Imagine</div>
+                        <div class="preu"> 320€</div>
+                        <div class="instruccions">36</div>
+                    </div>
+                </div>
+                <diV class="espai estacio">
+                    <diV class="container">
+                        <div class="nom">Estació Lamentos</div>
+                        <div class="preu">200€</div>
+                        <div class="instruccions">37</div>
+                    </diV>
+                </diV>
+                <div class="espai sort">
+                    <div class="container">
+                        <div class="nom">Sort</div>
+                        <img src="/images/casellas/randomCasilla-removebg-preview.png">
+                        <div class="instruccions">38</div>
+                    </div>
+                </div>
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra dark-blue"></div>
+                        <div class="nom">Parc MayPay</div>
+                        <div class="preu">350€</div>
+                        <div class="instruccions">39</div>
+                    </div>
+                </div>
+                <div class="espai tarifa tarifa-lux">
+                    <div class="container">
+                        <div class="nom">Impost de luxe</div>
+                        <div class="instruccions">200€</div>
+                        <div class="instruccions">40</div>
+                    </div>
+                </div>
+
+                <div class="espai propietat">
+                    <div class="container">
+                        <div class="color-barra dark-blue"></div>
+                        <div class="nom">Boardwalk</div>
+                        <div class="preu">400€</div>
+                        <div class="instruccions">41</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info2">
+            <h1>INFO JUGADORS</h1>
+            <h2>Nº Jugadors</h2>
+
+            <p id="jugador1"></p>
+            <br>
+            <div id="propietatsJ1"></div>
+
+            <p id="casellaJ1" style="border-bottom: 2px solid black; padding-bottom: 10px;"></p>
+
+            <p id="jugador2"></p>
+            <br>
+            <div id="propietatsJ2"></div>
+            <p id="casellaJ2" style="border-bottom: 2px solid black; padding-bottom: 10px;"></p>
+
+            <p id="jugador3"></p>
+            <br>
+            <div id="propietatsJ3"></div>
+            <p id="casellaJ3" style="border-bottom: 2px solid black; padding-bottom: 10px;"></p>
+
+            <p id="jugador4"></p>
+            <br>
+            <div id="propietatsJ4"></div>
+            <p id="casellaJ4" style="border-bottom: 2px solid black; padding-bottom: 10px;"></p>
+
+        </div>
+    </div>
+    <div id="fiPartida">
+        <h1>La partida ha acabat.</h1>
+        <h2>RESULTATS:</h2>
+        <p id="fPartidaJugador1"></p>
+        <p id="fPartidaJugador2"></p>
+        <p id="fPartidaJugador3"></p>
+        <p id="fPartidaJugador4"></p>
+        <h1 id="perdedor">Ha perdut el jugador: </h1>
+        <p class="copy">&copy; Daniel Fernandez, Belko Konte i Yassir Andaloussi - Projecte JavaScript 2024</p>
+    </div>
+</body>
+
+</html>
